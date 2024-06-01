@@ -1,0 +1,56 @@
+version: '3.7'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ecommerce-api
+    container_name: ecommerce-api
+    restart: unless-stopped
+    tty: true
+    environment:
+      SERVICE_NAME: ecommerce-api
+      SERVICE_TAGS: dev
+    working_dir: /var/www
+    volumes:
+      - .:/var/www
+    networks:
+      - ecommerce
+
+  webserver:
+    image: nginx:alpine
+    container_name: ecommerce-webserver
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "80:80"
+    volumes:
+      - .:/var/www
+      - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
+    networks:
+      - ecommerce
+
+  db:
+    image: mysql:5.7.22
+    container_name: ecommerce-db
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: ecommerce
+      MYSQL_ROOT_PASSWORD:
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - ecommerce
+
+networks:
+  ecommerce:
+    driver: bridge
+
+volumes:
+  dbdata:
+    driver: local

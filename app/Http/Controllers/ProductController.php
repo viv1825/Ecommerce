@@ -2,77 +2,51 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Product;
+use Illuminate\Http\Request;
+use App\Services\ProductService;
+use App\Http\Resources\ProductResource;
+use App\Http\Requests\StoreProductRequest;
 
 class ProductController extends Controller
 {
+    protected $productService;
+    public function __construct(ProductService $productService) {
+        $this->productService = $productService;
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $products = Product::paginate(10); // Fetch 10 products per page
-        return view('products.index', compact('products'))
-            ->with('i', (request()->input('page', 1) - 1) * 10);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        return view('products.create');
+        $products = Product::paginate(10);
+        // dd ($products);
+        return ProductResource::collection($products);
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreProductRequest $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'price' => 'required|numeric',
-            'stock' => 'required|integer',
-        ]);
-
-        Product::create($request->all());
-
-        return redirect()->route('products.index')
-            ->with('success', 'Product created successfully.');
+        //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(product $product)
+    public function show(Product $product)
     {
-        return view('products.show', compact('product'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(product $product)
-    {
-        return view('products.edit', compact('product'));
+        //
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Product $product)
+    public function update(StoreProductRequest $request, Product $product)
     {
-        $request->validate([
-            'name' => 'required',
-            'price' => 'required|numeric',
-            'stock' => 'required|integer',
-        ]);
-
-        $product->update($request->all());
-
-        return redirect()->route('products.index')
-            ->with('success', 'Product updated successfully.');
+        //
     }
 
     /**
@@ -80,9 +54,6 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        $product->delete();
-
-        return redirect()->route('products.index')
-            ->with('success', 'Product deleted successfully.');
+        //
     }
 }
