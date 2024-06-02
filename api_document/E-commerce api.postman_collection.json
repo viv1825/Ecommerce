@@ -1,0 +1,509 @@
+{
+  "info": {
+    "_postman_id": "f1724dee-6355-4766-a605-bf077c1525f3",
+    "name": "E-commerce api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "35578279"
+  },
+  "item": [
+    {
+      "name": "Product List",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/products",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "products"]
+        },
+        "description": "StartFragment\n\n**Description**: Retrieves a list of all products.\n\n**Response Example**:\n\n```\njsonCopy code[\n  {\n    \"id\": 1,\n    \"name\": \"Product 1\",\n    \"description\": \"Description of Product 1\",\n    \"price\": 100,\n    \"stock\": 10\n  },\n  ...\n]\n\n ```\n\nEndFragment"
+      },
+      "response": [
+        {
+          "name": "Product List",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/products",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "products"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "JSON",
+          "header": [
+            {
+              "key": "Host",
+              "value": "localhost:8000",
+              "type": "text"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 02 Jun 2024 15:54:27 GMT",
+              "type": "text"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 02 Jun 2024 15:54:27 GMT",
+              "type": "text"
+            },
+            {
+              "key": "Connection",
+              "value": "close",
+              "type": "text"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.2.4",
+              "type": "text"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private",
+              "type": "text"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "type": "text"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"updated_name\",\n            \"description\": \"updated-description\",\n            \"price\": \"100.00\",\n            \"stock\": 10\n        },\n        {\n            \"id\": 2,\n            \"name\": \"ut\",\n            \"description\": \"Eum et facere incidunt voluptatem voluptas. Expedita molestiae sit exercitationem sint sit cum possimus. Illo nam dolore numquam ab ad qui nihil. Sunt aliquid molestiae nihil quo.\",\n            \"price\": \"167.84\",\n            \"stock\": 10\n        },\n        {\n            \"id\": 3,\n            \"name\": \"aliquid\",\n            \"description\": \"Aut ex ullam qui rerum. Et nostrum repellat hic est maxime. Est eos explicabo minus et et. Consequatur sed inventore possimus quisquam omnis.\",\n            \"price\": \"564.94\",\n            \"stock\": 93\n        },\n        {\n            \"id\": 4,\n            \"name\": \"error\",\n            \"description\": \"Non quaerat vero occaecati dolorum temporibus ut. Animi accusamus ex eveniet. Dicta voluptas est ut velit ut quo magnam. Veritatis quas sequi dolor soluta et dolores.\",\n            \"price\": \"885.39\",\n            \"stock\": 23\n        },\n        {\n            \"id\": 5,\n            \"name\": \"quos\",\n            \"description\": \"Ullam quia quam provident eos quo velit voluptatem. Enim iusto temporibus quisquam et sequi sit et. Dolorem beatae nisi aut alias impedit suscipit illum.\",\n            \"price\": \"241.20\",\n            \"stock\": 57\n        },\n        {\n            \"id\": 6,\n            \"name\": \"repellendus\",\n            \"description\": \"Dolorem autem dolor consequatur eum possimus vitae. Sunt libero quas veniam dignissimos. Autem iste asperiores non officia quisquam. Quam natus dolor quis omnis velit dolores et.\",\n            \"price\": \"76.80\",\n            \"stock\": 87\n        },\n        {\n            \"id\": 7,\n            \"name\": \"quia\",\n            \"description\": \"Consequatur perspiciatis qui accusantium et. Corporis hic ea fugiat culpa et ratione. Eveniet quod voluptatem aut quia labore. Magnam omnis et est.\",\n            \"price\": \"415.35\",\n            \"stock\": 20\n        },\n        {\n            \"id\": 8,\n            \"name\": \"dolores\",\n            \"description\": \"Itaque eos est provident corrupti. Voluptas nobis incidunt omnis et tenetur ratione.\",\n            \"price\": \"295.62\",\n            \"stock\": 80\n        },\n        {\n            \"id\": 9,\n            \"name\": \"culpa\",\n            \"description\": \"Aut et magni omnis est placeat accusamus. Exercitationem nihil saepe non est est. Sed et tempore et animi qui velit.\",\n            \"price\": \"116.13\",\n            \"stock\": 65\n        },\n        {\n            \"id\": 10,\n            \"name\": \"quis\",\n            \"description\": \"Atque dignissimos qui sapiente porro id voluptas nulla. Non molestiae aperiam molestiae enim recusandae adipisci est. Nobis itaque dolor voluptatibus dolorem consequuntur.\",\n            \"price\": \"384.30\",\n            \"stock\": 32\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://localhost:8000/api/products?page=1\",\n        \"last\": \"http://localhost:8000/api/products?page=6\",\n        \"prev\": null,\n        \"next\": \"http://localhost:8000/api/products?page=2\"\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 6,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/products?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": \"http://localhost:8000/api/products?page=2\",\n                \"label\": \"2\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/products?page=3\",\n                \"label\": \"3\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/products?page=4\",\n                \"label\": \"4\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/products?page=5\",\n                \"label\": \"5\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/products?page=6\",\n                \"label\": \"6\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/products?page=2\",\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://localhost:8000/api/products\",\n        \"per_page\": 10,\n        \"to\": 10,\n        \"total\": 52\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Product Store",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/products/?name=Phone&description=Android&price=100&stock=10",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "products", ""],
+          "query": [
+            {
+              "key": "name",
+              "value": "Phone"
+            },
+            {
+              "key": "description",
+              "value": "Android"
+            },
+            {
+              "key": "price",
+              "value": "100"
+            },
+            {
+              "key": "stock",
+              "value": "10"
+            }
+          ]
+        },
+        "description": "StartFragment\n\n**Description**: Creates a new product.\n\n**Request Parameters**:\n\n- `name` (string, required): The name of the product.\n    \n- `description` (string, required): A description of the product.\n    \n- `price` (number, required): The price of the product.\n    \n- `stock` (integer, required): The stock quantity of the product.\n    \n\n**Example Request**:\n\n```\njsonCopy code{\n  \"name\": \"bott\",\n  \"description\": \"bott\",\n  \"price\": 100,\n  \"stock\": 10\n}\n\n ```\n\n**Response Example**:\n\n```\njsonCopy code{\n  \"id\": 52,\n  \"name\": \"bott\",\n  \"description\": \"bott\",\n  \"price\": 100,\n  \"stock\": 10,\n  \"created_at\": \"2024-06-02T12:34:56Z\",\n  \"updated_at\": \"2024-06-02T12:34:56Z\"\n}\n\n ```\n\nEndFragment"
+      },
+      "response": [
+        {
+          "name": "Product Store",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/products/?name=Phone&description=Android&price=100&stock=10",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "products", ""],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "Phone"
+                },
+                {
+                  "key": "description",
+                  "value": "Android"
+                },
+                {
+                  "key": "price",
+                  "value": "100"
+                },
+                {
+                  "key": "stock",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "JSON",
+          "header": [
+            {
+              "key": "Host",
+              "value": "localhost:8000",
+              "type": "text"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 02 Jun 2024 15:56:07 GMT",
+              "type": "text"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 02 Jun 2024 15:56:07 GMT",
+              "type": "text"
+            },
+            {
+              "key": "Connection",
+              "value": "close",
+              "type": "text"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.2.4",
+              "type": "text"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private",
+              "type": "text"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "type": "text"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"data\": {\n        \"id\": 57,\n        \"name\": \"Phone\",\n        \"description\": \"Android\",\n        \"price\": \"100\",\n        \"stock\": \"10\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Product show",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/products/10",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "products", "10"]
+        },
+        "description": "StartFragment\n\n**Description**: Retrieves the details of a specific product.\n\n**Path Parameters**:\n\n- `id` (integer, required): The ID of the product.\n    \n\nEndFragment"
+      },
+      "response": [
+        {
+          "name": "Product show",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/products/10",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "products", "10"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "JSON",
+          "header": [
+            {
+              "key": "Host",
+              "value": "localhost:8000",
+              "type": "text"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 02 Jun 2024 16:15:27 GMT",
+              "type": "text"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 02 Jun 2024 16:15:27 GMT",
+              "type": "text"
+            },
+            {
+              "key": "Connection",
+              "value": "close",
+              "type": "text"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.2.4",
+              "type": "text"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private",
+              "type": "text"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "type": "text"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"data\": {\n        \"id\": 10,\n        \"name\": \"quis\",\n        \"description\": \"Atque dignissimos qui sapiente porro id voluptas nulla. Non molestiae aperiam molestiae enim recusandae adipisci est. Nobis itaque dolor voluptatibus dolorem consequuntur.\",\n        \"price\": \"384.30\",\n        \"stock\": 32\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Product delete",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/products/53",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "products", "53"]
+        },
+        "description": "StartFragment\n\n**Description**: Deletes a specific product.\n\n**Path Parameters**:\n\n- `id` (integer, required): The ID of the product.\n    \n\n**Response Example**:\n\n```\njsonCopy code{\n  \"message\": \"Product deleted successfully.\"\n}\n\n ```\n\nEndFragment"
+      },
+      "response": [
+        {
+          "name": "Product delete",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/products/57",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "products", "57"]
+            }
+          },
+          "status": "No Content",
+          "code": 204,
+          "_postman_previewlanguage": "Text",
+          "header": [
+            {
+              "key": "Host",
+              "value": "localhost:8000",
+              "type": "text"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 02 Jun 2024 16:16:17 GMT",
+              "type": "text"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 02 Jun 2024 16:16:17 GMT",
+              "type": "text"
+            },
+            {
+              "key": "Connection",
+              "value": "close",
+              "type": "text"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.2.4",
+              "type": "text"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private",
+              "type": "text"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": ""
+        }
+      ]
+    },
+    {
+      "name": "Product update",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Cookie",
+            "value": "XSRF-TOKEN=eyJpdiI6IjNMRHdQUDN5VDZ3M0Jid29XMFlPTEE9PSIsInZhbHVlIjoidUE0LzJKRy94K0YwQWpMa1R3bnlsZm8vNEhVVHJMUmhSVE1OYkxkZzlVUXhlVFdPeXVxZ2VqQTlXVWhLOXFaSEVPOGNvcnRCOTgxQ25adHN4RUw1MGJsd0ZEc1ZwUGhFUFRiMlM4VWZYUmhBYk5KRnRZWnpFNU4rWHluKzFKMUciLCJtYWMiOiI3ZWI5MzRlNzgyNWE4NGYzNTY4NDY4N2ZkMTUwNWQ5OTliYTBhNTlhOGJhZWEwZDc4ODQxYTYxZDQ5ODAzNzdhIiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6Ik1Sb1ZNVnVxRXYyUWN5OWttOFJnekE9PSIsInZhbHVlIjoiZmVkTE1VY3BHRWlLempJaXQ3a1BHeERndjlCZ215M01ldzEzQW9jYWZOMjZwd3Q3ZlEzYUVCZ2lBQ1JBMlRVVklWTEVPbTdRS3Q4WlEzM1VVTkV6c0YyVnUrRWNzVVVtVHBwYjZ4UWlKb3B3MUNVaHBQdVE3VVZYNHVxR2c2TC8iLCJtYWMiOiJkNDIwMDQ1NDNhY2ZkMGZmZDYxMGQ5MzlmOWRhZDc0NGZmNGEzYzg2NTMzYTQxMzI5OTFkMWE4ZGNhNGU4ODg3IiwidGFnIjoiIn0%3D",
+            "name": "cookie",
+            "type": "text"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "no-cache",
+            "name": "cache-control",
+            "type": "text"
+          },
+          {
+            "key": "Postman-Token",
+            "value": "<calculated when request is sent>",
+            "name": "postman-token",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "name": "content-type",
+            "type": "text"
+          },
+          {
+            "key": "Content-Length",
+            "value": "<calculated when request is sent>",
+            "name": "content-length",
+            "type": "text"
+          },
+          {
+            "key": "Host",
+            "value": "<calculated when request is sent>",
+            "name": "host",
+            "type": "text"
+          },
+          {
+            "key": "User-Agent",
+            "value": "PostmanRuntime/7.32.1",
+            "name": "user-agent",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "*/*",
+            "name": "accept",
+            "type": "text"
+          },
+          {
+            "key": "Accept-Encoding",
+            "value": "gzip, deflate, br",
+            "name": "accept-encoding",
+            "type": "text"
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive",
+            "name": "connection",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"uto\",\r\n  \"description\": \"updated-description\",\r\n  \"price\": \"100\",\r\n  \"stock\": 10\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/products/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "products", "1"]
+        }
+      },
+      "response": [
+        {
+          "name": "Product update",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"uto\",\r\n  \"description\": \"updated-description\",\r\n  \"price\": \"100\",\r\n  \"stock\": 10\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/products/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "products", "1"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "JSON",
+          "header": [
+            {
+              "key": "Host",
+              "value": "localhost:8000",
+              "type": "text"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 02 Jun 2024 16:18:21 GMT",
+              "type": "text"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 02 Jun 2024 16:18:21 GMT",
+              "type": "text"
+            },
+            {
+              "key": "Connection",
+              "value": "close",
+              "type": "text"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.2.4",
+              "type": "text"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private",
+              "type": "text"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "type": "text"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"uto\",\n        \"description\": \"updated-description\",\n        \"price\": \"100\",\n        \"stock\": 10\n    }\n}"
+        }
+      ]
+    }
+  ]
+}
