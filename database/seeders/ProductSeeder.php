@@ -6,10 +6,17 @@ use App\Models\Product;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+/**
+ * Seeder class to populate the products table with sample data.
+ */
 class ProductSeeder extends Seeder
 {
     /**
      * Run the database seeds.
+     *
+     * This method will create 50 instances of the Product model using the factory.
+     *
+     * @return void
      */
     public function run(): void
     {
